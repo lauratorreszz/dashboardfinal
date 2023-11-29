@@ -474,14 +474,14 @@ export const links = [
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
+        name: 'Dados',
         icon: <FiShoppingBag />,
       },
     ],
   },
 
   {
-    title: 'Pages',
+    title: 'Páginas',
     links: [
       {
         name: 'orders',
@@ -501,25 +501,17 @@ export const links = [
     title: 'Apps',
     links: [
       {
-        name: 'calendar',
+        name: 'Calendário',
         icon: <AiOutlineCalendar />,
       },
       {
         name: 'kanban',
         icon: <BsKanban />,
       },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
     ],
   },
   {
-    title: 'Charts',
+    title: 'Gráficos',
     links: [
       {
         name: 'line',
@@ -586,30 +578,30 @@ export const chatData = [
   {
     image:
       avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
-    time: '9:08 AM',
+    message: 'Superaquecimento',
+    desc: 'Bomba 4',
+    time: '9:08',
   },
   {
     image:
       avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
-    time: '11:56 AM',
+    message: 'Alerta de falha',
+    desc: 'Bomba 12',
+    time: '11:56',
   },
   {
     image:
       avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
-    time: '4:39 AM',
+    message: 'Bomba inoperante',
+    desc: 'Bomba 6',
+    time: '4:39',
   },
   {
     image:
       avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
+    message: 'Bomba retorna à ativa',
+    desc: 'Bomba 13',
+    time: '15:12',
   },
 ];
 
