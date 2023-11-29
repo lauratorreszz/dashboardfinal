@@ -504,12 +504,7 @@ export const links = [
         icon: <AiOutlineStock />,
       },
       {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
-
-      {
-        name: 'bar',
+        name: 'Horimetro',
         icon: <AiOutlineBarChart />,
       },
       {
@@ -521,11 +516,11 @@ export const links = [
         icon: <RiStockLine />,
       },
       {
-        name: 'color-mapping',
+        name: 'Temperatura',
         icon: <BsBarChart />,
       },
       {
-        name: 'stacked',
+        name: 'Alertas',
         icon: <AiOutlineBarChart />,
       },
     ],
