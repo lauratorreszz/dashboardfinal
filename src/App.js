@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dados, Calendario, Stacked, Pyramid, Bombas, Anotaçoes, Line, Horimetro, Pie, Financial, Temperatura} from './pages';
+import { Dados, Calendario, Alertas, Pyramid, Bombas, Anotaçoes, Line, Horimetro, Problemas, Financial, Temperatura} from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -78,11 +78,11 @@ const App = () => {
                 {/* charts  */}
                 <Route path="/line" element={<Line />} />
                 <Route path="/horimetro" element={<Horimetro />} />
-                <Route path="/pie" element={<Pie />} />
+                <Route path="/problemas" element={<Problemas />} />
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/temperatura" element={<Temperatura />} />
                 <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} />
+                <Route path="/alertas" element={<Alertas />} />
 
               </Routes>
             </div>

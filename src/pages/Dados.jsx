@@ -3,7 +3,7 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-import {Stacked, Pie, Button, LineChart, SparkLine } from '../components';
+import {Alertas, Problemas, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
@@ -25,7 +25,7 @@ const Ecommerce = () => {
       <div className="flex gap-10 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
           <div className="flex justify-between">
-            <p className="font-semibold text-xl">Frêquencia de alertas de falha</p>
+            <p className="font-semibold text-xl">Frequência de alertas de falha</p>
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
               </p>
@@ -39,9 +39,6 @@ const Ecommerce = () => {
               <div>
                 <p>
                   <span className="text-3xl font-semibold">80,2%</span>
-                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
-                    ?
-                  </span>
                 </p>
                 <p className="text-gray-500 mt-1">2022</p>
               </div>
@@ -64,60 +61,13 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
+              <Alertas currentMode={currentMode} width="320px" height="360px" />
             </div>
           </div>
         </div>
-        <div>
-          <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
-            style={{ backgroundColor: currentColor }}
-          >
-            <div className="flex justify-between items-center ">
-              <p className="font-semibold text-white text-2xl">Vibração</p>
 
-              <div>
-                <p className="text-2xl text-white font-semibold mt-8">34 rpm</p>
-                <p className="text-gray-200">Vibração média mensal</p>
-              </div>
-            </div>
-
-            <div className="mt-4">
-              <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
-            </div>
-          </div>
-
-          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
-            <div>
-              <p className="text-2xl font-semibold ">$43,246</p>
-              <p className="text-gray-400">Yearly sales</p>
-            </div>
-
-            <div className="w-40">
-              <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div className="flex gap-10 m-4 flex-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
-          <div className="flex justify-between items-center gap-2">
-          </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
-          </div>
-        </div>
-
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
-          <div className="flex justify-between items-center gap-2 mb-10">
-            <p className="text-xl font-semibold">???</p>
-            <DropDown currentMode={currentMode} />
-          </div>
-          <div className="md:w-full overflow-auto">
-            <LineChart />
-          </div>
-        </div>
-      </div>
 
       <div className="flex flex-wrap justify-center">
         <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
@@ -149,20 +99,19 @@ const Ecommerce = () => {
               </div>
             ))}
             <div className="mt-4">
-              <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
             </div>
           </div>
 
         </div>
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
-            <p className="text-xl font-semibold">MedicalPro Branding</p>
+            <p className="text-xl font-semibold">Pendências do dia</p>
             <button type="button" className="text-xl font-semibold text-gray-400">
               <IoIosMore />
             </button>
           </div>
           <p className="text-xs cursor-pointer hover:drop-shadow-xl font-semibold rounded-lg w-24 bg-orange-400 py-0.5 px-2 text-gray-200 mt-10">
-            16 APR, 2021
+            28 NOV, 2023
           </p>
 
           <div className="flex gap-4 border-b-1 border-color mt-6">
@@ -172,41 +121,6 @@ const Ecommerce = () => {
                 <p className="text-sm">{item.desc}</p>
               </div>
             ))}
-          </div>
-          <div className="border-b-1 border-color pb-4 mt-2">
-            <p className="text-md font-semibold mb-2">Teams</p>
-
-            <div className="flex gap-4">
-              {medicalproBranding.teams.map((item) => (
-                <p
-                  key={item.name}
-                  style={{ background: item.color }}
-                  className="cursor-pointer hover:drop-shadow-xl text-white py-0.5 px-3 rounded-lg text-xs"
-                >
-                  {item.name}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div className="mt-2">
-            <p className="text-md font-semibold mb-2">Leaders</p>
-            <div className="flex gap-4">
-              {medicalproBranding.leaders.map((item, index) => (
-                <img key={index} className="rounded-full w-8 h-8" src={item.image} alt="" />
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-between items-center mt-5 border-t-1 border-color">
-            <div className="mt-3">
-              <Button
-                color="white"
-                bgColor={currentColor}
-                text="Add"
-                borderRadius="10px"
-              />
-            </div>
-
-            <p className="text-gray-400 text-sm">36 Recent Transactions</p>
           </div>
         </div>
       </div>
